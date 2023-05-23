@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Student Login{% endblock title %}
+{% block body %}
+<form action="login" method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="Email or Username" name="un"><br><br>
+    <input type="password" name="pw" id="" placeholder='enter password'> <br>
+    <button>Login</button>
+    {{data}}
+</form>
+{% endblock body %}

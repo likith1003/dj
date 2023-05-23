@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello welcome This is Verbal page</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block body %}
+<h1>Hello welcome This is Verbal page</h1>
+<table>
+    <th>Name</th>
+    <th>Pno</th>
+    <th>Email</th>
+    <th>Bgroop</th>
+    <th>Address</th>
+    {% for i in data %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.pno}}</td>
+        <td>{{i.bgroop}}</td>
+        <td>{{i.address}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body %}

@@ -2,6 +2,11 @@ from django.contrib import admin
 from django.urls import path
 from home import views
 
+
+admin.site.site_header = "Pyspider Admin"
+admin.site.site_title = "Pyspiders Admin Portal"
+admin.site.index_title = "Welcome to Pyspiders Researcher Portal"
+
 urlpatterns = [
     path('',views.index,name='home'),
     path('login',views.login,name='login'),

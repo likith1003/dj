@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=!, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is Login page Wecome to login page     </h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block body %}
+<h1> Wecome to login page  {{name}}   </h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Pno</th>
+        <th>Email</th>
+    </tr>
+    {% for i in demo %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.pno}}</td>
+        <td>{{i.email}}</td>
+    </tr>
+    
+    {% endfor %}
+</table>
+{% endblock body %}
